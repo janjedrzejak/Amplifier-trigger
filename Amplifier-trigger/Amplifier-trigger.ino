@@ -9,23 +9,12 @@ void setup() {
   }
     pinMode(buttonPin, INPUT);
 }
-
 void loop() {
   buttonState = digitalRead(buttonPin);
   if(buttonState == HIGH) {
-    digitalWrite(2, HIGH);
-    delay(2000);
-    digitalWrite(3, HIGH);
-    delay(2000);
-    digitalWrite(4, HIGH);
-    delay(2000);
-    digitalWrite(5, HIGH);
-    delay(2000);
-    digitalWrite(6, HIGH);
-    delay(2000);
-    digitalWrite(7, HIGH);
-    delay(2000);
-  }
-  
-  
+    for(i = 2; i< 8; i++) {
+      digitalWrite(i, HIGH);
+      delay(2000);
+    }
+  }  
 } 
